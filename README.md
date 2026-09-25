@@ -74,6 +74,43 @@ LOCKER UNLOCKED  LIMIT CHECK
 ====================================
         SMART DIGITAL LOCKER
 ====================================
+Software Requirements
+Simplicity Studio
+Silicon Labs WiSeConnect SDK
+Embedded C
+VS Code (optional)
+UART terminal software
+Hardware Platform
+Silicon Labs SiWG917
+The SiWG917 development platform is used as the main controller for the project.
+The controller is responsible for:
+Reading button inputs.
+Processing user input.
+Verifying the PIN.
+Managing authentication attempts.
+Controlling the locker state.
+Sending status information through UART.
+Button Interface
+The onboard buttons are used to provide user input.
+Example configuration:
+BTN0 → User Input
+BTN1 → User Input
+The exact button function can be assigned according to the application logic.
+The project uses the Silicon Labs button driver to initialize and process button events
+PIN Authentication
+The system uses a predefined PIN for authentication.
+Example:
+Stored PIN = 1234
+The user enters the PIN using the available input buttons.
+The system compares the entered PIN with the stored PIN.
+Correct PIN
+PIN CORRECT
+ACCESS GRANTED
+LOCKER UNLOCKED
+Incorrect PIN
+PIN INCORRECT
+ACCESS DENIED
+Attempts Remaining: 2
 
 System Started Successfully
 
